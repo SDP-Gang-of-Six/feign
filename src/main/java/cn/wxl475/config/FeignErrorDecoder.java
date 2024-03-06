@@ -1,7 +1,7 @@
 package cn.wxl475.config;
 
 
-import com.ps.exception.MyFeignException;
+import cn.wxl475.exception.MyFeignException;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;
