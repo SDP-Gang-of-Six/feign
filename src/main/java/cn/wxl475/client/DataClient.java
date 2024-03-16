@@ -11,6 +11,6 @@ import java.util.ArrayList;
 
 @FeignClient("data")
 public interface DataClient {
-    @PostMapping("/uploadImages")
+    @PostMapping("/data/uploadImages")
     Result uploadImages(@RequestHeader String Authorization, @RequestBody ArrayList<MultipartFile> images);
 }
