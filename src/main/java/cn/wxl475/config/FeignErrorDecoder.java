@@ -1,7 +1,8 @@
 package cn.wxl475.config;
 
 
-import cn.wxl475.exception.MyFeignException;
+import cn.wxl475.exception.FeignException;
+import cn.wxl475.exception.MyException;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;
@@ -26,7 +27,7 @@ public class FeignErrorDecoder implements ErrorDecoder {
       if (response.status() == HttpStatus.INTERNAL_SERVER_ERROR.value()){
         String body = Util.toString(response.body().asReader(StandardCharsets.UTF_8));
         JSONObject jsonObject = JSONObject.fromObject(body);
-        return new MyFeignException(jsonObject.getString("msg"));
+        return new FeignException(jsonObject.getString("msg"));
       }
       return errorStatus(methodKey, response);
     }
