@@ -2,7 +2,6 @@ package cn.wxl475.config;
 
 
 import cn.wxl475.exception.FeignException;
-import cn.wxl475.exception.MyException;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;
