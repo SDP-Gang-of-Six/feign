@@ -10,5 +10,5 @@ import java.util.ArrayList;
 @FeignClient("user")
 public interface UserClient {
     @GetMapping("/user/getNicknameById/{uid}")
-    Result getNicknameById(@RequestHeader("Authorization") String token, @PathVariable Long uid);
+    Result getNicknameById(@PathVariable Long uid);
 }
